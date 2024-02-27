@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>HTML FORM</title>
+<style type="text/css">
+input
+{
+width:600px;
+height:50px;
+border-radius:5px;
+border:2px solid blue;
+font-size:20px;
+}
+#btn
+{
+background-color:green;
+color:white;
+font-size:20px;
+border-radius:0px 50px;
+}
+#btn:hover
+{background-color:blue;
+}
+span
+{
+color:red;
+font-size:20px;
+}
+</style>
+</head>
+<body>
+<form action="https://docs.google.com/spreadsheets/d/1e6qHuGKVvy5Suww7TS0aQrkKmvfhiBhKROJ5MPpFlno/edit#gid=2017108606"autocomplete="off" onsubmit="return validation()">
+<table cellspacing="15" align="center">
+<tr><td><input type="text" id="user" placeholder="user" >
+<br><span id="userr"></span></td></tr>
+<br><br><br><br><tr><td><input type="password" id="password" placeholder="password" >
+<br><span id="passs"></span></td></tr>
+<tr><td><input type="submit" id="btn" placeholder="submit"></td></tr>
+</table>
+</form>
+<script type="text/javascript">
+function validation()
+{
+var user=document.getElementById('user').value;
+var pass=document.getElementById('password').value;
+if(user == "")
+{
+document.getElementById("userr").innerHTML="PLEASE ENTER USER ID";
+return false;
+}
+if(user!="MODIGROUP")
+{
+document.getElementById("userr").innerHTML="PLEASE ENTER CORRCET USERId";
+return false;
+}
+else
+{
+document.getElementById("userr").innerHTML="";
+}
+if(pass == "")
+{
+document.getElementById("passs").innerHTML="PLEASE ENTER PASSWORD";
+
+return false;
+}
+
+if (pass!="Group@987")
+{
+document.getElementById("passs").innerHTML="PLEASE ENTER CORRECT PASSWORD";
+
+return false;
+}
+else
+{
+document.getElementById("Passs").innerHTML="";
+}
+}
+</script>
+</body>
+</html>
